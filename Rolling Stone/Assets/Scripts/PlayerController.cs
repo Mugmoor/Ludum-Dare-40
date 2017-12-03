@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Transform player;
     Vector3 startScale;
     float startDistance;
+    public float scaleSpeed = 0.5f;
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         float curDistance = Vector3.Distance(start.transform.position, transform.position) - startDistance;
-        player.localScale = (startScale * curDistance) / 10;
+         
     }
 
     void FixedUpdate()

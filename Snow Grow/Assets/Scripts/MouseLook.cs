@@ -32,7 +32,7 @@ public class MouseLook : MonoBehaviour
             return;
 
         // Calculate the current rotation angles
-        float wantedHeight = target.position.y + target.localScale.y;
+        float wantedHeight = target.position.y;
         float currentHeight = transform.position.y;
 
 

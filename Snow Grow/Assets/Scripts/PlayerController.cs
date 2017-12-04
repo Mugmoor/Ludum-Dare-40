@@ -2,7 +2,8 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float thrust;
+    public float lateralThrust;
+    public float forwardThrust = 10f;
     public Rigidbody rb;
 
     void FixedUpdate()
@@ -10,25 +11,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             print("GOING RIGHT!");
-            rb.AddRelativeForce(transform.right * thrust);
+            rb.AddRelativeForce(transform.right * lateralThrust);
         }
 
         if(Input.GetKeyDown(KeyCode.A))
         {
             print("GOING LEFT!");
-            rb.AddRelativeForce((transform.right * -1) * thrust);
+            rb.AddRelativeForce((transform.right * -1) * lateralThrust);
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            print("FULL SPEED!");
-            rb.AddRelativeForce(transform.forward * thrust);
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            print("HOP BACKWARD!");
-            rb.AddRelativeForce((transform.forward * -1) * thrust);
-        }
+        rb.AddForce((transform.position.z * new Vector3(0f, 0f, forwardThrust)) * Time.deltaTime) ;
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    print("FULL SPEED!");
+        //    rb.AddRelativeForce(transform.forward * thrust);
+        //}
     }
 }

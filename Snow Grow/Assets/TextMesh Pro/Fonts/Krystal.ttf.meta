@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f0ad74d27923fea4fb2ce4cc0849f1ae
+timeCreated: 1512409518
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Krystal
+  fontNames:
+  - Krystal
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c0415aed2ff297843b9b67b3a824c7c3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

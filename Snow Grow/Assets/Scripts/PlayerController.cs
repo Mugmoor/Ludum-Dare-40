@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
     public float lateralThrust;
     public float forwardThrust = 10f;
     public Rigidbody rb;
+    public float maxSpeed = 200f;
 
     void FixedUpdate()
     {
@@ -21,10 +22,10 @@ public class PlayerController : MonoBehaviour
         }
 
         rb.AddForce((transform.position.z * new Vector3(0f, 0f, forwardThrust)) * Time.deltaTime) ;
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    print("FULL SPEED!");
-        //    rb.AddRelativeForce(transform.forward * thrust);
-        //}
+
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
     }
 }

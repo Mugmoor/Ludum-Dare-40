@@ -20,7 +20,7 @@ public class Grow : MonoBehaviour
         if (isGrounded == true)
         {
             player.localScale += new Vector3(scaleRate, scaleRate, scaleRate);
-            score = (int)player.localScale.x * 10;
+            score = (int)player.localScale.x * 10   ;
             text.text = score.ToString();
         }
     }

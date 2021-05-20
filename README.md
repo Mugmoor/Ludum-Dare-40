@@ -4,7 +4,7 @@ Made by Brenden Barton
 
 brenden.e.barton@gmail.com
 
-http://www.brendens.website
+http://www.brendenbarton.com
 
 This game is not currently licensed, though this will change in the future.
 
